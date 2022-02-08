@@ -97,28 +97,7 @@ namespace SupplyProgramUi.UserUserControls
             InitializeComponent();
             updateLocationbox(comboBox1);
         }
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            comboBox2.Items.Clear();
-            comboBox3.Items.Clear();
-            updateproductbox(comboBox1, comboBox2, normaluser.GetFullProductStorageTable());
-        }
 
-        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            comboBox3.Items.Clear();
-            updatepackagebox(comboBox2, comboBox3, normaluser.GetFullProductStorageTable()); ;
-        }
-
-        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            var stock = 0;
-            var order = 0;
-            updatescalebox(comboBox3, scaletextBox1);
-            normaluser.SearchinProductStockfull(comboBox2.Text, comboBox1.Text, comboBox3.Text, ref stock, ref order);
-            textBox1.Text = stock.ToString();
-            textBox2.Text = order.ToString();
-        }
 
         private void Savebutton1_Click(object sender, EventArgs e)
         {
@@ -157,6 +136,29 @@ namespace SupplyProgramUi.UserUserControls
                 db.SaveChanges();
                 SaveAndExit();
             }
+        }
+
+        private void comboBox1_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            comboBox2.Items.Clear();
+            comboBox3.Items.Clear();
+            updateproductbox(comboBox1, comboBox2, normaluser.GetFullProductStorageTable());
+        }
+
+        private void comboBox2_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            comboBox3.Items.Clear();
+            updatepackagebox(comboBox2, comboBox3, normaluser.GetFullProductStorageTable()); 
+        }
+
+        private void comboBox3_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            var stock = 0;
+            var order = 0;
+            updatescalebox(comboBox3, scaletextBox1);
+            normaluser.SearchinProductStockfull(comboBox2.Text, comboBox1.Text, comboBox3.Text, ref stock, ref order);
+            textBox1.Text = stock.ToString();
+            textBox2.Text = order.ToString();
         }
     }
 }
