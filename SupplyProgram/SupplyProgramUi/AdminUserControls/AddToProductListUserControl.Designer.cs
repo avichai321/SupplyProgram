@@ -29,24 +29,24 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddToProductListUserControl));
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.ProductdataGridView1 = new System.Windows.Forms.DataGridView();
             this.addProducttextBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.Productlabel1 = new System.Windows.Forms.Label();
             this.addproducttodatabasebutton1 = new System.Windows.Forms.Button();
             this.removeproductlabel2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.RemoveProductbutton1 = new System.Windows.Forms.Button();
             this.removecomboBox1 = new System.Windows.Forms.ComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ProductdataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // ProductdataGridView1
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(332, 48);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(479, 328);
-            this.dataGridView1.TabIndex = 1;
+            this.ProductdataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ProductdataGridView1.Location = new System.Drawing.Point(332, 48);
+            this.ProductdataGridView1.Name = "ProductdataGridView1";
+            this.ProductdataGridView1.RowTemplate.Height = 25;
+            this.ProductdataGridView1.Size = new System.Drawing.Size(479, 328);
+            this.ProductdataGridView1.TabIndex = 1;
             // 
             // addProducttextBox1
             // 
@@ -55,14 +55,14 @@
             this.addProducttextBox1.Size = new System.Drawing.Size(148, 23);
             this.addProducttextBox1.TabIndex = 2;
             // 
-            // label1
+            // Productlabel1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(15, 109);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(114, 15);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "New Product Name:";
+            this.Productlabel1.AutoSize = true;
+            this.Productlabel1.Location = new System.Drawing.Point(15, 109);
+            this.Productlabel1.Name = "Productlabel1";
+            this.Productlabel1.Size = new System.Drawing.Size(114, 15);
+            this.Productlabel1.TabIndex = 3;
+            this.Productlabel1.Text = "New Product Name:";
             // 
             // addproducttodatabasebutton1
             // 
@@ -83,15 +83,15 @@
             this.removeproductlabel2.TabIndex = 5;
             this.removeproductlabel2.Text = "Remove Product:";
             // 
-            // button1
+            // RemoveProductbutton1
             // 
-            this.button1.Location = new System.Drawing.Point(135, 291);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(148, 31);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Remove From DataBase";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.RemoveProductbutton1.Location = new System.Drawing.Point(135, 291);
+            this.RemoveProductbutton1.Name = "RemoveProductbutton1";
+            this.RemoveProductbutton1.Size = new System.Drawing.Size(148, 31);
+            this.RemoveProductbutton1.TabIndex = 6;
+            this.RemoveProductbutton1.Text = "Remove From DataBase";
+            this.RemoveProductbutton1.UseVisualStyleBackColor = true;
+            this.RemoveProductbutton1.Click += new System.EventHandler(this.button1_Click);
             // 
             // removecomboBox1
             // 
@@ -107,15 +107,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.Controls.Add(this.removecomboBox1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.RemoveProductbutton1);
             this.Controls.Add(this.removeproductlabel2);
             this.Controls.Add(this.addproducttodatabasebutton1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.Productlabel1);
             this.Controls.Add(this.addProducttextBox1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.ProductdataGridView1);
             this.Name = "AddToProductListUserControl";
             this.Size = new System.Drawing.Size(814, 476);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ProductdataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -123,12 +123,12 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView ProductdataGridView1;
         private System.Windows.Forms.TextBox addProducttextBox1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label Productlabel1;
         private System.Windows.Forms.Button addproducttodatabasebutton1;
         private System.Windows.Forms.Label removeproductlabel2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button RemoveProductbutton1;
         private System.Windows.Forms.ComboBox removecomboBox1;
     }
 }

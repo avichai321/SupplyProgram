@@ -56,13 +56,13 @@ namespace SupplyProgramUi.AdminUserControls
         {
             InitializeComponent();
             dataGridView1.DataSource = adminuser.GetFullProductStorageTable();
-            storageslist(comboBox1);
+            storageslist(LocationlistcomboBox1);
         }
 
         private void Sortbutton_Click(object sender, EventArgs e)
         {
             var table = adminuser.GetFullProductStorageTable();
-            sortTable(dataGridView1, comboBox1, table);
+            sortTable(dataGridView1, LocationlistcomboBox1, table);
         }
 
         private void label1_Click(object sender, EventArgs e)

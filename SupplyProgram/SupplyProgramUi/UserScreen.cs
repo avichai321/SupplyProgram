@@ -45,7 +45,7 @@ namespace SupplyProgramUi
         public UserScreen()
         {
             InitializeComponent();
-            GetFullProductTable(dataGridView1);
+            GetFullProductTable(OperationsdataGridView1);
 
         }
         Timer timer = new Timer();
@@ -70,19 +70,19 @@ namespace SupplyProgramUi
 
         private void Addbutton1_Click(object sender, EventArgs e)
         {
-            panel1.Controls.Clear();
+            Userpanel1.Controls.Clear();
             useraddfullproductUserControl1 useraddfullproductUserControl1 = new useraddfullproductUserControl1();
-            useraddfullproductUserControl1.Parent = panel1;
+            useraddfullproductUserControl1.Parent = Userpanel1;
             useraddfullproductUserControl1.ProductChanged += (newproduct) =>
             {
                 MeassgesLabel1.Text = newproduct;
                 timer.Start();
-                dataGridView1.DataSource = normalUser.GetFullProductStorageTable();
+                OperationsdataGridView1.DataSource = normalUser.GetFullProductStorageTable();
 
             };
             useraddfullproductUserControl1.SaveAndExit += () =>
              {
-                 panel1.Controls.Clear();
+                 Userpanel1.Controls.Clear();
                  MeassgesLabel1.Text = "Saved Successfuly";
                  timer.Start();
              };
@@ -90,18 +90,18 @@ namespace SupplyProgramUi
 
         private void Editbutton4_Click(object sender, EventArgs e)
         {
-            panel1.Controls.Clear();
+            Userpanel1.Controls.Clear();
             userEditProductsUserControl1 userEditProducts = new userEditProductsUserControl1();
-            userEditProducts.Parent = panel1;
+            userEditProducts.Parent = Userpanel1;
             userEditProducts.ProductChanged += (newproduct) =>
              {
                  MeassgesLabel1.Text = newproduct;
                  timer.Start();
-                 dataGridView1.DataSource = normalUser.GetFullProductStorageTable();
+                 OperationsdataGridView1.DataSource = normalUser.GetFullProductStorageTable();
              };
             userEditProducts.SaveAndExit += () =>
              {
-                 panel1.Controls.Clear();
+                 Userpanel1.Controls.Clear();
                  MeassgesLabel1.Text = "Saved Successfuly";
                  timer.Start();
              };
@@ -110,12 +110,12 @@ namespace SupplyProgramUi
 
         private void ChangeStoragebutton3_Click(object sender, EventArgs e)
         {
-            panel1.Controls.Clear();
+            Userpanel1.Controls.Clear();
             userSortUserControl1 userSortUserControl1 = new userSortUserControl1();
-            userSortUserControl1.Parent = panel1;
+            userSortUserControl1.Parent = Userpanel1;
             userSortUserControl1.sortedtable += (term, list) =>
              {
-                 dataGridView1.DataSource = list;
+                 OperationsdataGridView1.DataSource = list;
                  MeassgesLabel1.Text = $"Sorted by {term.Text}";
                  timer.Start();
 
@@ -123,7 +123,7 @@ namespace SupplyProgramUi
              };
             userSortUserControl1.SaveAndExit += () =>
              {
-                 panel1.Controls.Clear();
+                 Userpanel1.Controls.Clear();
                  MeassgesLabel1.Text = "Saved Successfuly";
                  timer.Start();
              };

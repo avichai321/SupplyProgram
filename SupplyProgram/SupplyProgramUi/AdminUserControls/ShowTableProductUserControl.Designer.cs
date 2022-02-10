@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ShowTableProductUserControl));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.LocationlistcomboBox1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.Sortbutton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -45,14 +45,14 @@
             this.dataGridView1.Size = new System.Drawing.Size(534, 377);
             this.dataGridView1.TabIndex = 1;
             // 
-            // comboBox1
+            // LocationlistcomboBox1
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(101, 103);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(119, 23);
-            this.comboBox1.TabIndex = 2;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.LocationlistcomboBox1.FormattingEnabled = true;
+            this.LocationlistcomboBox1.Location = new System.Drawing.Point(101, 103);
+            this.LocationlistcomboBox1.Name = "LocationlistcomboBox1";
+            this.LocationlistcomboBox1.Size = new System.Drawing.Size(119, 23);
+            this.LocationlistcomboBox1.TabIndex = 2;
+            this.LocationlistcomboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -81,7 +81,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.Controls.Add(this.Sortbutton);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.LocationlistcomboBox1);
             this.Controls.Add(this.dataGridView1);
             this.Name = "ShowTableProductUserControl";
             this.Size = new System.Drawing.Size(800, 444);
@@ -94,7 +94,7 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox LocationlistcomboBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button Sortbutton;
     }

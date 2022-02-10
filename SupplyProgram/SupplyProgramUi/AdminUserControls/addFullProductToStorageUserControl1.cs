@@ -60,18 +60,18 @@ namespace SupplyProgramUi.UserUserControls
         public addFullProductToStorageUserControl1()
         {
             InitializeComponent();
-            fillcomboboxes(comboBox1,comboBox2,comboBox3);
+            fillcomboboxes(LocationcomboBox1,ProductcomboBox2,PackagecomboBox3);
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var result=adminuser.AddProductToStorage(comboBox1.Text,comboBox2.Text,comboBox3.Text,Convert.ToInt32(numericUpDown1.Value), Convert.ToInt32(numericUpDown2.Value));
+            var result=adminuser.AddProductToStorage(LocationcomboBox1.Text,ProductcomboBox2.Text,PackagecomboBox3.Text,Convert.ToInt32(UnitInStocknumericUpDown1.Value), Convert.ToInt32(UnitInOrdernumericUpDown2.Value));
             ProductChanged(result);
         }
 
         private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
         {
-            updatescalebox(comboBox3, textBox1);
+            updatescalebox(PackagecomboBox3, scaletextBox1);
         }
 
         private void button2_Click(object sender, EventArgs e)

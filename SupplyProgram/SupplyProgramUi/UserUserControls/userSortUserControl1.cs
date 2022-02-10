@@ -58,13 +58,13 @@ namespace SupplyProgramUi.UserUserControls
         public userSortUserControl1()
         {
             InitializeComponent();
-            storageslist(comboBox1);
+            storageslist(LocationcomboBox1);
         }
 
         private void Sortbutton_Click(object sender, EventArgs e)
         {
             var table = normaluser.GetFullProductStorageTable();
-            sortedtable(comboBox1,sortTable(comboBox1, table));
+            sortedtable(LocationcomboBox1,sortTable(LocationcomboBox1, table));
         }
 
         private void button2_Click(object sender, EventArgs e)

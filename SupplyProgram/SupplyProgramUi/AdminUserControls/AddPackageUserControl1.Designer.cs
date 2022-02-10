@@ -33,12 +33,12 @@
             this.removePackagebutton1 = new System.Windows.Forms.Button();
             this.removePackagelabel2 = new System.Windows.Forms.Label();
             this.addPackagetodatabasebutton1 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.PackageNamelabel1 = new System.Windows.Forms.Label();
             this.addPackagetextBox1 = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.PackagesdataGridView1 = new System.Windows.Forms.DataGridView();
             this.scalecomboBox2 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PackagesdataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // removePackagecomboBox1
@@ -78,14 +78,14 @@
             this.addPackagetodatabasebutton1.UseVisualStyleBackColor = true;
             this.addPackagetodatabasebutton1.Click += new System.EventHandler(this.addPackagetodatabasebutton1_Click);
             // 
-            // label1
+            // PackageNamelabel1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(29, 115);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(116, 15);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "New Package Name:";
+            this.PackageNamelabel1.AutoSize = true;
+            this.PackageNamelabel1.Location = new System.Drawing.Point(29, 115);
+            this.PackageNamelabel1.Name = "PackageNamelabel1";
+            this.PackageNamelabel1.Size = new System.Drawing.Size(116, 15);
+            this.PackageNamelabel1.TabIndex = 10;
+            this.PackageNamelabel1.Text = "New Package Name:";
             // 
             // addPackagetextBox1
             // 
@@ -94,14 +94,14 @@
             this.addPackagetextBox1.Size = new System.Drawing.Size(148, 23);
             this.addPackagetextBox1.TabIndex = 9;
             // 
-            // dataGridView1
+            // PackagesdataGridView1
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(377, 43);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(416, 357);
-            this.dataGridView1.TabIndex = 8;
+            this.PackagesdataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.PackagesdataGridView1.Location = new System.Drawing.Point(377, 43);
+            this.PackagesdataGridView1.Name = "PackagesdataGridView1";
+            this.PackagesdataGridView1.RowTemplate.Height = 25;
+            this.PackagesdataGridView1.Size = new System.Drawing.Size(416, 357);
+            this.PackagesdataGridView1.TabIndex = 8;
             // 
             // scalecomboBox2
             // 
@@ -131,12 +131,12 @@
             this.Controls.Add(this.removePackagebutton1);
             this.Controls.Add(this.removePackagelabel2);
             this.Controls.Add(this.addPackagetodatabasebutton1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.PackageNamelabel1);
             this.Controls.Add(this.addPackagetextBox1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.PackagesdataGridView1);
             this.Name = "AddPackageUserControl1";
             this.Size = new System.Drawing.Size(820, 487);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PackagesdataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -148,9 +148,9 @@
         private System.Windows.Forms.Button removePackagebutton1;
         private System.Windows.Forms.Label removePackagelabel2;
         private System.Windows.Forms.Button addPackagetodatabasebutton1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label PackageNamelabel1;
         private System.Windows.Forms.TextBox addPackagetextBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView PackagesdataGridView1;
         private System.Windows.Forms.ComboBox scalecomboBox2;
         private System.Windows.Forms.Label label2;
     }

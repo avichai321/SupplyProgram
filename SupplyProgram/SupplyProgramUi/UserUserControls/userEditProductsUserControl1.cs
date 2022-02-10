@@ -95,7 +95,7 @@ namespace SupplyProgramUi.UserUserControls
         public userEditProductsUserControl1()
         {
             InitializeComponent();
-            updateLocationbox(comboBox1);
+            updateLocationbox(LocationcomboBox1);
         }
 
 
@@ -103,7 +103,7 @@ namespace SupplyProgramUi.UserUserControls
         {
             try
             {
-                var result = normaluser.SaveEditedChanges(comboBox2.Text, comboBox1.Text, comboBox3.Text, Convert.ToInt32(textBox1.Text), Convert.ToInt32(textBox2.Text));
+                var result = normaluser.SaveEditedChanges(ProductcomboBox2.Text, LocationcomboBox1.Text, PackagecomboBox3.Text, Convert.ToInt32(UnitinstocktextBox1.Text), Convert.ToInt32(UnitInOrdertextBox2.Text));
 
                 ProductChanged(result);
 
@@ -119,7 +119,7 @@ namespace SupplyProgramUi.UserUserControls
         {
             try
             {
-                var result = normaluser.RemoveProductfromStorage(comboBox2.Text, comboBox1.Text, comboBox3.Text);
+                var result = normaluser.RemoveProductfromStorage(ProductcomboBox2.Text, LocationcomboBox1.Text, PackagecomboBox3.Text);
                 ProductChanged(result);
             }
             catch
@@ -140,25 +140,25 @@ namespace SupplyProgramUi.UserUserControls
 
         private void comboBox1_SelectedIndexChanged_1(object sender, EventArgs e)
         {
-            comboBox2.Items.Clear();
-            comboBox3.Items.Clear();
-            updateproductbox(comboBox1, comboBox2, normaluser.GetFullProductStorageTable());
+            ProductcomboBox2.Items.Clear();
+            PackagecomboBox3.Items.Clear();
+            updateproductbox(LocationcomboBox1, ProductcomboBox2, normaluser.GetFullProductStorageTable());
         }
 
         private void comboBox2_SelectedIndexChanged_1(object sender, EventArgs e)
         {
-            comboBox3.Items.Clear();
-            updatepackagebox(comboBox2, comboBox3, normaluser.GetFullProductStorageTable()); 
+            PackagecomboBox3.Items.Clear();
+            updatepackagebox(ProductcomboBox2, PackagecomboBox3, normaluser.GetFullProductStorageTable()); 
         }
 
         private void comboBox3_SelectedIndexChanged_1(object sender, EventArgs e)
         {
             var stock = 0;
             var order = 0;
-            updatescalebox(comboBox3, scaletextBox1);
-            normaluser.SearchinProductStockfull(comboBox2.Text, comboBox1.Text, comboBox3.Text, ref stock, ref order);
-            textBox1.Text = stock.ToString();
-            textBox2.Text = order.ToString();
+            updatescalebox(PackagecomboBox3, scaletextBox1);
+            normaluser.SearchinProductStockfull(ProductcomboBox2.Text, LocationcomboBox1.Text, PackagecomboBox3.Text, ref stock, ref order);
+            UnitinstocktextBox1.Text = stock.ToString();
+            UnitInOrdertextBox2.Text = order.ToString();
         }
     }
 }

@@ -31,8 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(userSortUserControl1));
             this.Sortbutton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.LocationcomboBox1 = new System.Windows.Forms.ComboBox();
+            this.Closebutton2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Sortbutton
@@ -54,23 +54,23 @@
             this.label1.TabIndex = 6;
             this.label1.Text = "location list";
             // 
-            // comboBox1
+            // LocationcomboBox1
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(108, 95);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(119, 23);
-            this.comboBox1.TabIndex = 5;
+            this.LocationcomboBox1.FormattingEnabled = true;
+            this.LocationcomboBox1.Location = new System.Drawing.Point(108, 95);
+            this.LocationcomboBox1.Name = "LocationcomboBox1";
+            this.LocationcomboBox1.Size = new System.Drawing.Size(119, 23);
+            this.LocationcomboBox1.TabIndex = 5;
             // 
-            // button2
+            // Closebutton2
             // 
-            this.button2.Location = new System.Drawing.Point(85, 195);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(106, 42);
-            this.button2.TabIndex = 50;
-            this.button2.Text = "Close menu";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.Closebutton2.Location = new System.Drawing.Point(85, 195);
+            this.Closebutton2.Name = "Closebutton2";
+            this.Closebutton2.Size = new System.Drawing.Size(106, 42);
+            this.Closebutton2.TabIndex = 50;
+            this.Closebutton2.Text = "Close menu";
+            this.Closebutton2.UseVisualStyleBackColor = true;
+            this.Closebutton2.Click += new System.EventHandler(this.button2_Click);
             // 
             // userSortUserControl1
             // 
@@ -78,10 +78,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.Closebutton2);
             this.Controls.Add(this.Sortbutton);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.LocationcomboBox1);
             this.Name = "userSortUserControl1";
             this.Size = new System.Drawing.Size(269, 423);
             this.ResumeLayout(false);
@@ -93,7 +93,7 @@
 
         private System.Windows.Forms.Button Sortbutton;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.ComboBox LocationcomboBox1;
+        private System.Windows.Forms.Button Closebutton2;
     }
 }

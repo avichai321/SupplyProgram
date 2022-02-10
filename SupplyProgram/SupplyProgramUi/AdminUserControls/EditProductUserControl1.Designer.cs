@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditProductUserControl1));
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.EditProductdataGridView1 = new System.Windows.Forms.DataGridView();
+            this.PackagecomboBox3 = new System.Windows.Forms.ComboBox();
+            this.ProductcomboBox2 = new System.Windows.Forms.ComboBox();
+            this.LocationcomboBox1 = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -42,46 +42,46 @@
             this.Savebutton1 = new System.Windows.Forms.Button();
             this.removebutton2 = new System.Windows.Forms.Button();
             this.scaletextBox1 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.UnitInStocktextBox1 = new System.Windows.Forms.TextBox();
+            this.UnitInOrdertextBox2 = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.EditProductdataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // EditProductdataGridView1
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(254, 46);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(534, 377);
-            this.dataGridView1.TabIndex = 2;
+            this.EditProductdataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.EditProductdataGridView1.Location = new System.Drawing.Point(254, 46);
+            this.EditProductdataGridView1.Name = "EditProductdataGridView1";
+            this.EditProductdataGridView1.RowTemplate.Height = 25;
+            this.EditProductdataGridView1.Size = new System.Drawing.Size(534, 377);
+            this.EditProductdataGridView1.TabIndex = 2;
             // 
-            // comboBox3
+            // PackagecomboBox3
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(101, 165);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(121, 23);
-            this.comboBox3.TabIndex = 23;
-            this.comboBox3.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
+            this.PackagecomboBox3.FormattingEnabled = true;
+            this.PackagecomboBox3.Location = new System.Drawing.Point(101, 165);
+            this.PackagecomboBox3.Name = "PackagecomboBox3";
+            this.PackagecomboBox3.Size = new System.Drawing.Size(121, 23);
+            this.PackagecomboBox3.TabIndex = 23;
+            this.PackagecomboBox3.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
             // 
-            // comboBox2
+            // ProductcomboBox2
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(101, 132);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 23);
-            this.comboBox2.TabIndex = 22;
-            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
+            this.ProductcomboBox2.FormattingEnabled = true;
+            this.ProductcomboBox2.Location = new System.Drawing.Point(101, 132);
+            this.ProductcomboBox2.Name = "ProductcomboBox2";
+            this.ProductcomboBox2.Size = new System.Drawing.Size(121, 23);
+            this.ProductcomboBox2.TabIndex = 22;
+            this.ProductcomboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
-            // comboBox1
+            // LocationcomboBox1
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(101, 103);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 23);
-            this.comboBox1.TabIndex = 21;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.LocationcomboBox1.FormattingEnabled = true;
+            this.LocationcomboBox1.Location = new System.Drawing.Point(101, 103);
+            this.LocationcomboBox1.Name = "LocationcomboBox1";
+            this.LocationcomboBox1.Size = new System.Drawing.Size(121, 23);
+            this.LocationcomboBox1.TabIndex = 21;
+            this.LocationcomboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label5
             // 
@@ -165,43 +165,43 @@
             this.scaletextBox1.Size = new System.Drawing.Size(121, 23);
             this.scaletextBox1.TabIndex = 32;
             // 
-            // textBox1
+            // UnitInStocktextBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(101, 223);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(121, 23);
-            this.textBox1.TabIndex = 33;
+            this.UnitInStocktextBox1.Location = new System.Drawing.Point(101, 223);
+            this.UnitInStocktextBox1.Name = "UnitInStocktextBox1";
+            this.UnitInStocktextBox1.Size = new System.Drawing.Size(121, 23);
+            this.UnitInStocktextBox1.TabIndex = 33;
             // 
-            // textBox2
+            // UnitInOrdertextBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(101, 251);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(121, 23);
-            this.textBox2.TabIndex = 34;
+            this.UnitInOrdertextBox2.Location = new System.Drawing.Point(101, 251);
+            this.UnitInOrdertextBox2.Name = "UnitInOrdertextBox2";
+            this.UnitInOrdertextBox2.Size = new System.Drawing.Size(121, 23);
+            this.UnitInOrdertextBox2.TabIndex = 34;
             // 
             // EditProductUserControl1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.UnitInOrdertextBox2);
+            this.Controls.Add(this.UnitInStocktextBox1);
             this.Controls.Add(this.scaletextBox1);
             this.Controls.Add(this.removebutton2);
             this.Controls.Add(this.Savebutton1);
-            this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.PackagecomboBox3);
+            this.Controls.Add(this.ProductcomboBox2);
+            this.Controls.Add(this.LocationcomboBox1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.LocationLabel1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.EditProductdataGridView1);
             this.Name = "EditProductUserControl1";
             this.Size = new System.Drawing.Size(800, 444);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EditProductdataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -209,10 +209,10 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.DataGridView EditProductdataGridView1;
+        private System.Windows.Forms.ComboBox PackagecomboBox3;
+        private System.Windows.Forms.ComboBox ProductcomboBox2;
+        private System.Windows.Forms.ComboBox LocationcomboBox1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
@@ -222,7 +222,7 @@
         private System.Windows.Forms.Button Savebutton1;
         private System.Windows.Forms.Button removebutton2;
         private System.Windows.Forms.TextBox scaletextBox1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox UnitInStocktextBox1;
+        private System.Windows.Forms.TextBox UnitInOrdertextBox2;
     }
 }

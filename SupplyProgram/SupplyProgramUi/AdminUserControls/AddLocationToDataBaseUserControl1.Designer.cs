@@ -33,7 +33,7 @@
             this.removelocationfromdatabasebutton1 = new System.Windows.Forms.Button();
             this.removeproductlabel2 = new System.Windows.Forms.Label();
             this.addlocationtodatabasebutton1 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.NewLocationlabel1 = new System.Windows.Forms.Label();
             this.addLocationtextBox1 = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -76,14 +76,14 @@
             this.addlocationtodatabasebutton1.UseVisualStyleBackColor = true;
             this.addlocationtodatabasebutton1.Click += new System.EventHandler(this.addlocationtodatabasebutton1_Click);
             // 
-            // label1
+            // NewLocationlabel1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(16, 119);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(118, 15);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "New Location Name:";
+            this.NewLocationlabel1.AutoSize = true;
+            this.NewLocationlabel1.Location = new System.Drawing.Point(16, 119);
+            this.NewLocationlabel1.Name = "NewLocationlabel1";
+            this.NewLocationlabel1.Size = new System.Drawing.Size(118, 15);
+            this.NewLocationlabel1.TabIndex = 10;
+            this.NewLocationlabel1.Text = "New Location Name:";
             // 
             // addLocationtextBox1
             // 
@@ -110,7 +110,7 @@
             this.Controls.Add(this.removelocationfromdatabasebutton1);
             this.Controls.Add(this.removeproductlabel2);
             this.Controls.Add(this.addlocationtodatabasebutton1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.NewLocationlabel1);
             this.Controls.Add(this.addLocationtextBox1);
             this.Controls.Add(this.dataGridView1);
             this.Name = "AddLocationToDataBaseUserControl1";
@@ -127,7 +127,7 @@
         private System.Windows.Forms.Button removelocationfromdatabasebutton1;
         private System.Windows.Forms.Label removeproductlabel2;
         private System.Windows.Forms.Button addlocationtodatabasebutton1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label NewLocationlabel1;
         private System.Windows.Forms.TextBox addLocationtextBox1;
         private System.Windows.Forms.DataGridView dataGridView1;
     }

@@ -19,7 +19,7 @@ namespace SupplyProgramUi
             InitializeComponent();
             using (var db = new SuplyProgramContext())
             {
-                dataGridView1.DataSource = db.Users.ToList();
+                UserdataGridView1.DataSource = db.Users.ToList();
             };
 
         }

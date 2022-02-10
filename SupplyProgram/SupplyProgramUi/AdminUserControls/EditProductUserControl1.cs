@@ -93,33 +93,33 @@ namespace SupplyProgramUi.UserUserControls
         public EditProductUserControl1()
         {
             InitializeComponent();
-            dataGridView1.DataSource = adminuser.GetFullProductStorageTable();
-            updateLocationbox(comboBox1);
+            EditProductdataGridView1.DataSource = adminuser.GetFullProductStorageTable();
+            updateLocationbox(LocationcomboBox1);
 
 
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            comboBox2.Items.Clear();
-            comboBox3.Items.Clear();
-            updateproductbox(comboBox1, comboBox2, adminuser.GetFullProductStorageTable());
+            ProductcomboBox2.Items.Clear();
+            PackagecomboBox3.Items.Clear();
+            updateproductbox(LocationcomboBox1, ProductcomboBox2, adminuser.GetFullProductStorageTable());
         }
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            comboBox3.Items.Clear();
-            updatepackagebox(comboBox2, comboBox3, adminuser.GetFullProductStorageTable()); ;
+            PackagecomboBox3.Items.Clear();
+            updatepackagebox(ProductcomboBox2, PackagecomboBox3, adminuser.GetFullProductStorageTable()); ;
         }
 
         private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
         {
             var stock = 0;
             var order = 0;
-            updatescalebox(comboBox3, scaletextBox1);
-           var result = adminuser.SearchinProductStockfull(comboBox2.Text, comboBox1.Text, comboBox3.Text, ref stock, ref order);
-            textBox1.Text = stock.ToString();
-            textBox2.Text = order.ToString();
+            updatescalebox(PackagecomboBox3, scaletextBox1);
+           var result = adminuser.SearchinProductStockfull(ProductcomboBox2.Text, LocationcomboBox1.Text, PackagecomboBox3.Text, ref stock, ref order);
+            UnitInStocktextBox1.Text = stock.ToString();
+            UnitInOrdertextBox2.Text = order.ToString();
             ProductChanged(result);
 
 
@@ -129,8 +129,8 @@ namespace SupplyProgramUi.UserUserControls
         {
             try
             {
-                var result = adminuser.SaveEditedChanges(comboBox2.Text, comboBox1.Text, comboBox3.Text, Convert.ToInt32(textBox1.Text), Convert.ToInt32(textBox2.Text));
-                dataGridView1.DataSource = adminuser.GetFullProductStorageTable();
+                var result = adminuser.SaveEditedChanges(ProductcomboBox2.Text, LocationcomboBox1.Text, PackagecomboBox3.Text, Convert.ToInt32(UnitInStocktextBox1.Text), Convert.ToInt32(UnitInOrdertextBox2.Text));
+                EditProductdataGridView1.DataSource = adminuser.GetFullProductStorageTable();
                 ProductChanged(result);
 
             }
@@ -145,8 +145,8 @@ namespace SupplyProgramUi.UserUserControls
         {
             try
             {
-                var result = adminuser.RemoveProductfromStorage(comboBox2.Text, comboBox1.Text, comboBox3.Text);
-                dataGridView1.DataSource = adminuser.GetFullProductStorageTable();
+                var result = adminuser.RemoveProductfromStorage(ProductcomboBox2.Text, LocationcomboBox1.Text, PackagecomboBox3.Text);
+                EditProductdataGridView1.DataSource = adminuser.GetFullProductStorageTable();
                 ProductChanged(result);
             }
             catch

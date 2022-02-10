@@ -32,7 +32,7 @@ namespace SupplyProgramUi.AdminUserControls
         public AddToProductListUserControl()
         {
             InitializeComponent();
-            fillcombobox(removecomboBox1, dataGridView1);
+            fillcombobox(removecomboBox1, ProductdataGridView1);
 
         }
 
@@ -40,7 +40,7 @@ namespace SupplyProgramUi.AdminUserControls
         {
             var message = adminuser.AddProductToDatabase(addProducttextBox1.Text);
             ProductChanged(message);
-            fillcombobox(removecomboBox1, dataGridView1);
+            fillcombobox(removecomboBox1, ProductdataGridView1);
 
         }
 
@@ -48,7 +48,7 @@ namespace SupplyProgramUi.AdminUserControls
         {
             var message = adminuser.RemoveProductfromDatabase(removecomboBox1.Text);
             ProductChanged(message);
-            fillcombobox(removecomboBox1, dataGridView1);
+            fillcombobox(removecomboBox1, ProductdataGridView1);
         }
     }
 }

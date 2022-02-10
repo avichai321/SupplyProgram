@@ -38,7 +38,7 @@ namespace SupplyProgramUi.AdminUserControls
         public AddPackageUserControl1()
         {
             InitializeComponent();
-            fillcombobox(removePackagecomboBox1, scalecomboBox2, dataGridView1);
+            fillcombobox(removePackagecomboBox1, scalecomboBox2, PackagesdataGridView1);
   
         }
 
@@ -46,7 +46,7 @@ namespace SupplyProgramUi.AdminUserControls
         {
             var message = adminuser.AddPackageToDatabase(addPackagetextBox1.Text,scalecomboBox2.Text);
             packageChanged(message);
-            fillcombobox(removePackagecomboBox1, scalecomboBox2, dataGridView1);
+            fillcombobox(removePackagecomboBox1, scalecomboBox2, PackagesdataGridView1);
 
         }
 
@@ -54,7 +54,7 @@ namespace SupplyProgramUi.AdminUserControls
         {
             var message = adminuser.RemovePackageFromDatabase(removePackagebutton1.Text);
             packageChanged(message);
-            fillcombobox(removePackagecomboBox1, scalecomboBox2, dataGridView1);
+            fillcombobox(removePackagecomboBox1, scalecomboBox2, PackagesdataGridView1);
         }
     }
 }
