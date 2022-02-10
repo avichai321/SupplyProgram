@@ -21,7 +21,11 @@ namespace SupplyProgramUi
         Timer timer = new Timer();
         private void UserMenu_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Openform.ThisForm.Visible = true;
+            this.Hide();
+           var openform =new Openform();
+            openform.ShowDialog();
+            this.Close();
+
         }
 
         private void AdminScreen_Load(object sender, EventArgs e)

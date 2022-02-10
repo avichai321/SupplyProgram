@@ -22,12 +22,11 @@ namespace SupplyProgramUi
             {
 
                 var qur = from l in db.ProductStatus1s
-                          from l1 in db.Locations
-                          from l2 in db.Products
-                          from l3 in db.Packages
-                          from l4 in db.ScaleValues
-                          where l.LocationId == l1.LocationId && l.ProductId == l2.ProductId && l.PackageId == l3.PackageId && l3.ScaleId == l4.ScaleId
-                          select new
+                          join l1 in db.Locations on l.LocationId equals l1.LocationId
+                          join l2 in db.Products on l.ProductId equals l2.ProductId
+                          join l3 in db.Packages on l.PackageId equals l3.PackageId
+                          join l4 in db.ScaleValues on l3.ScaleId equals l4.ScaleId
+                          select new FullProductclass
                           {
                               Id = l.StatusId,
                               Location = l1.Location1,
@@ -39,8 +38,7 @@ namespace SupplyProgramUi
                           };
                 data.DataSource = qur.ToList();
 
-            }
-
+            };
         };
         public UserScreen()
         {
@@ -65,7 +63,10 @@ namespace SupplyProgramUi
 
         private void MainScreen_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Openform.ThisForm.Visible = true;
+            this.Hide();
+            var openform = new Openform();
+            openform.ShowDialog();
+            this.Close();
         }
 
         private void Addbutton1_Click(object sender, EventArgs e)

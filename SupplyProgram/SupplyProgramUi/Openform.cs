@@ -44,7 +44,8 @@ namespace SupplyProgramUi
                     userScreen.Show();
                     
                 }
-                Openform.ThisForm.Visible = false;
+                Openform.ThisForm.Hide();
+                this.Close();
             }
             else
             {
