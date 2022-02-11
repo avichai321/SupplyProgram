@@ -31,20 +31,20 @@ namespace SupplyProgramUi
             bool login = UserStatus.UserLogin(UsernametextBox1.Text,PasswordtextBox2.Text);
             if (login)
             {
+                Openform.ThisForm.Hide();
                 var admin = UserStatus.AdminOrUser(UsernametextBox1.Text,PasswordtextBox2.Text);
                 if (admin)
                 {
                     var adminScreen = new AdminScreen();
-                    adminScreen.Show();
+                    adminScreen.ShowDialog();
                    
                 }
                 else
                 {
                     var userScreen = new UserScreen();
-                    userScreen.Show();
+                    userScreen.ShowDialog();
                     
                 }
-                Openform.ThisForm.Hide();
                 this.Close();
             }
             else
