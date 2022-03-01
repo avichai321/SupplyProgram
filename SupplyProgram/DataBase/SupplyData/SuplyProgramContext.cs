@@ -29,7 +29,7 @@ namespace DataBase.SupplyData
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseSqlServer("Data Source=.\\SQLEXPRESS;Initial Catalog=SuplyProgram;Integrated Security=True");
+                optionsBuilder.UseSqlServer("Data Source=.\\SQLEXPRESS;Initial Catalog=SuplyProg;Integrated Security=True");
             }
         }
 
@@ -123,6 +123,53 @@ namespace DataBase.SupplyData
                     .HasMaxLength(50);
             });
 
+            #region LocationBasic
+            modelBuilder.Entity<Location>().HasData(new Location { LocationId = 1, Location1 = "HOME 1" });
+            modelBuilder.Entity<Location>().HasData(new Location { LocationId = 2, Location1 = "HOME 2" });
+            modelBuilder.Entity<Location>().HasData(new Location { LocationId = 3, Location1 = "STORE" });
+            #endregion
+
+            #region ProductBasic
+            modelBuilder.Entity<Product>().HasData(new Product { ProductId = 1, ProductName = "Black peppercorns" });
+            modelBuilder.Entity<Product>().HasData(new Product { ProductId = 2, ProductName = "Ground cinnamon" });
+            modelBuilder.Entity<Product>().HasData(new Product { ProductId = 3, ProductName = "Chili powder" });
+            modelBuilder.Entity<Product>().HasData(new Product { ProductId = 4, ProductName = "Hot-red-chili flakes" });
+            modelBuilder.Entity<Product>().HasData(new Product { ProductId = 5, ProductName = "Cumin" });
+            modelBuilder.Entity<Product>().HasData(new Product { ProductId = 6, ProductName = "Ground ginger" });
+            modelBuilder.Entity<Product>().HasData(new Product { ProductId = 7, ProductName = "Spicy Paprika" });
+            #endregion
+
+            #region ScaleBasic
+            modelBuilder.Entity<ScaleValue>().HasData(new ScaleValue { ScaleId = 1, ScalesTypes = "5 kg" });
+            modelBuilder.Entity<ScaleValue>().HasData(new ScaleValue { ScaleId = 2, ScalesTypes = "10 kg" });
+            modelBuilder.Entity<ScaleValue>().HasData(new ScaleValue { ScaleId = 3, ScalesTypes = "500 g" });
+            modelBuilder.Entity<ScaleValue>().HasData(new ScaleValue { ScaleId = 4, ScalesTypes = "300 g" });
+            modelBuilder.Entity<ScaleValue>().HasData(new ScaleValue { ScaleId = 5, ScalesTypes = "100 g" });
+            #endregion
+
+            #region PackageBasic
+            modelBuilder.Entity<Package>().HasData(new Package { PackageId = 1, PackageType = "BOX 1", ScaleId = 1 });
+            modelBuilder.Entity<Package>().HasData(new Package { PackageId = 2, PackageType = "BOX 3", ScaleId = 2 });
+            modelBuilder.Entity<Package>().HasData(new Package { PackageId = 3, PackageType = "Bag 1", ScaleId = 1 });
+            modelBuilder.Entity<Package>().HasData(new Package { PackageId = 4, PackageType = "Bag 2", ScaleId = 5 });
+            modelBuilder.Entity<Package>().HasData(new Package { PackageId = 5, PackageType = "Small Bag 1", ScaleId = 2 });
+            modelBuilder.Entity<Package>().HasData(new Package { PackageId = 6, PackageType = "Small Bag 2", ScaleId = 3 });
+            modelBuilder.Entity<Package>().HasData(new Package { PackageId = 7, PackageType = "BOX 3", ScaleId = 4 });
+            #endregion
+
+            #region ProductStatusBasic
+            modelBuilder.Entity<ProductStatus1>().HasData(new ProductStatus1 { StatusId = 1, LocationId = 1, ProductId = 2, PackageId = 3, UnitInstock = 10, UnitinOrder = 30 });
+            modelBuilder.Entity<ProductStatus1>().HasData(new ProductStatus1 { StatusId = 2, LocationId = 1, ProductId = 5, PackageId = 1, UnitInstock = 15, UnitinOrder = 30 });
+            modelBuilder.Entity<ProductStatus1>().HasData(new ProductStatus1 { StatusId = 3, LocationId = 2, ProductId = 3, PackageId = 3, UnitInstock = 20, UnitinOrder = 25 });
+            modelBuilder.Entity<ProductStatus1>().HasData(new ProductStatus1 { StatusId = 4, LocationId = 3, ProductId = 6, PackageId = 4, UnitInstock = 15, UnitinOrder = 16 });
+            modelBuilder.Entity<ProductStatus1>().HasData(new ProductStatus1 { StatusId = 5, LocationId = 2, ProductId = 3, PackageId = 1, UnitInstock = 15, UnitinOrder = 30 });
+            modelBuilder.Entity<ProductStatus1>().HasData(new ProductStatus1 { StatusId = 6, LocationId = 1, ProductId = 1, PackageId = 1, UnitInstock = 10, UnitinOrder = 15 });
+            #endregion
+
+            #region UsersBasic
+            modelBuilder.Entity<User>().HasData(new User { UsersId = 1, Username = "Admin", Password = "Aa123456", Email = "admin@gmail.com", Admin = true });
+            modelBuilder.Entity<User>().HasData(new User { UsersId = 2, Username = "User1", Password = "Aa123456", Email = "User2@gmail.com", Admin = true });
+            #endregion
             OnModelCreatingPartial(modelBuilder);
         }
 

@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ShowTableUserControl1));
             this.UserdataGridView1 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.UserdataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -46,7 +45,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImage = global::SupplyProgramUi.Properties.Resources.usercontrols_screens;
             this.Controls.Add(this.UserdataGridView1);
             this.Name = "ShowTableUserControl1";
             this.Size = new System.Drawing.Size(800, 444);

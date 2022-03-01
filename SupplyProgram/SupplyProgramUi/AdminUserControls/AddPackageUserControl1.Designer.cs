@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddPackageUserControl1));
             this.removePackagecomboBox1 = new System.Windows.Forms.ComboBox();
             this.removePackagebutton1 = new System.Windows.Forms.Button();
             this.removePackagelabel2 = new System.Windows.Forms.Label();
@@ -124,7 +123,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImage = global::SupplyProgramUi.Properties.Resources.usercontrols_screens;
             this.Controls.Add(this.label2);
             this.Controls.Add(this.scalecomboBox2);
             this.Controls.Add(this.removePackagecomboBox1);

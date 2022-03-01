@@ -110,7 +110,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImage = global::SupplyProgramUi.Properties.Resources.istockphoto_1270400319_170667a;
             this.ClientSize = new System.Drawing.Size(506, 390);
             this.Controls.Add(this.Loginbutton1);
             this.Controls.Add(this.PasswordtextBox2);

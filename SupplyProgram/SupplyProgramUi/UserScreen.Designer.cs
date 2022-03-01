@@ -43,7 +43,7 @@
             // 
             // Userpanel1
             // 
-            this.Userpanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Userpanel1.BackgroundImage")));
+            this.Userpanel1.BackgroundImage = global::SupplyProgramUi.Properties.Resources.User_panel;
             this.Userpanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Userpanel1.Location = new System.Drawing.Point(150, 12);
             this.Userpanel1.Name = "Userpanel1";
@@ -118,7 +118,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImage = global::SupplyProgramUi.Properties.Resources.user_screen;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(941, 460);
             this.Controls.Add(this.Exitbutton1);

@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(userEditProductsUserControl1));
             this.UnitInOrdertextBox2 = new System.Windows.Forms.TextBox();
             this.UnitinstocktextBox1 = new System.Windows.Forms.TextBox();
             this.scaletextBox1 = new System.Windows.Forms.TextBox();
@@ -183,7 +182,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImage = global::SupplyProgramUi.Properties.Resources.user_usercontrol_screen;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Controls.Add(this.Closebutton2);
             this.Controls.Add(this.UnitInOrdertextBox2);

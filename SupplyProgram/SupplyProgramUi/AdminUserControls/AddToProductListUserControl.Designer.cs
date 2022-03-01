@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddToProductListUserControl));
             this.ProductdataGridView1 = new System.Windows.Forms.DataGridView();
             this.addProducttextBox1 = new System.Windows.Forms.TextBox();
             this.Productlabel1 = new System.Windows.Forms.Label();
@@ -105,7 +104,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImage = global::SupplyProgramUi.Properties.Resources.usercontrols_screens;
             this.Controls.Add(this.removecomboBox1);
             this.Controls.Add(this.RemoveProductbutton1);
             this.Controls.Add(this.removeproductlabel2);

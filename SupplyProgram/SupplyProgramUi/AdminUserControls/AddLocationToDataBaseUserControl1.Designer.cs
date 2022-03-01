@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddLocationToDataBaseUserControl1));
             this.removelocationcomboBox1 = new System.Windows.Forms.ComboBox();
             this.removelocationfromdatabasebutton1 = new System.Windows.Forms.Button();
             this.removeproductlabel2 = new System.Windows.Forms.Label();
@@ -105,7 +104,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImage = global::SupplyProgramUi.Properties.Resources.usercontrols_screens;
             this.Controls.Add(this.removelocationcomboBox1);
             this.Controls.Add(this.removelocationfromdatabasebutton1);
             this.Controls.Add(this.removeproductlabel2);
