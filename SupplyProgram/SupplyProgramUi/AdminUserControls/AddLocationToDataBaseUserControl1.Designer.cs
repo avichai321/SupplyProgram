@@ -54,7 +54,7 @@
             this.removelocationfromdatabasebutton1.TabIndex = 13;
             this.removelocationfromdatabasebutton1.Text = "Remove From DataBase";
             this.removelocationfromdatabasebutton1.UseVisualStyleBackColor = true;
-            this.removelocationfromdatabasebutton1.Click += new System.EventHandler(this.removelocationfromdatabasebutton1_Click);
+            this.removelocationfromdatabasebutton1.Click += new System.EventHandler(this.Removelocationfromdatabasebutton_Click);
             // 
             // removeproductlabel2
             // 
@@ -73,7 +73,7 @@
             this.addlocationtodatabasebutton1.TabIndex = 11;
             this.addlocationtodatabasebutton1.Text = "Add To DataBase";
             this.addlocationtodatabasebutton1.UseVisualStyleBackColor = true;
-            this.addlocationtodatabasebutton1.Click += new System.EventHandler(this.addlocationtodatabasebutton1_Click);
+            this.addlocationtodatabasebutton1.Click += new System.EventHandler(this.Addlocationtodatabasebutton_Click);
             // 
             // NewLocationlabel1
             // 

@@ -9,7 +9,7 @@ namespace SupplyProgarmOperations
         private ProductStatus1 productStatus = new ProductStatus1();
         public ProductStatus1 Build() => productStatus;
 
-        public ProductFluentBuilder setProductname(string productName)
+        public ProductFluentBuilder SetProductname(string productName)
         {
             using (var db = new SuplyProgramContext())
             {
@@ -18,7 +18,7 @@ namespace SupplyProgarmOperations
             }
             return this;
         }
-        public ProductFluentBuilder setLocationname(string locationName)
+        public ProductFluentBuilder SetLocationname(string locationName)
         {
             using (var db = new SuplyProgramContext())
             {
@@ -27,7 +27,7 @@ namespace SupplyProgarmOperations
             }
             return this;
         }
-        public ProductFluentBuilder setpackagename(string packageName)
+        public ProductFluentBuilder Setpackagename(string packageName)
         {
             using (var db = new SuplyProgramContext())
             {
@@ -36,12 +36,12 @@ namespace SupplyProgarmOperations
             }
             return this;
         }
-        public ProductFluentBuilder setUnitInstock(int unitStock)
+        public ProductFluentBuilder SetUnitInstock(int unitStock)
         {
             productStatus.UnitInstock = unitStock;
             return this;
         }
-        public ProductFluentBuilder setUnitInorder(int unitOrder)
+        public ProductFluentBuilder SetUnitInorder(int unitOrder)
         {
             productStatus.UnitinOrder = unitOrder;
             return this;

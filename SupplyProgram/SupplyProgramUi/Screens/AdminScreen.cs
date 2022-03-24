@@ -74,7 +74,7 @@ namespace SupplyProgramUi
             panel1.Controls.Clear();
             AddLocationToDataBaseUserControl1 addLocationToDataBaseUserControl1 = new AddLocationToDataBaseUserControl1();
             addLocationToDataBaseUserControl1.Parent = panel1;
-            addLocationToDataBaseUserControl1.locationChanged += (newlocation) =>
+            addLocationToDataBaseUserControl1.LocationChanged += (newlocation) =>
             {
                 MeassgesLabel1.Text = newlocation;
                 timer.Start();
@@ -86,7 +86,7 @@ namespace SupplyProgramUi
             panel1.Controls.Clear();
             AddPackageUserControl1 addPackageUserControl1 = new AddPackageUserControl1();
             addPackageUserControl1.Parent = panel1;
-            addPackageUserControl1.packageChanged += (newpackage) =>
+            addPackageUserControl1.PackageChanged += (newpackage) =>
              {
                  MeassgesLabel1.Text = newpackage;
                  timer.Start();

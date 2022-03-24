@@ -97,11 +97,11 @@ namespace SupplyProgarmOperations
                 {
                     ProductFluentBuilder productFluentBuilder = new ProductFluentBuilder();
                     ProductStatus1 productStatus = productFluentBuilder
-                        .setProductname(product)
-                        .setLocationname(location)
-                        .setpackagename(package)
-                        .setUnitInstock(stock)
-                        .setUnitInorder(order).Build();
+                        .SetProductname(product)
+                        .SetLocationname(location)
+                        .Setpackagename(package)
+                        .SetUnitInstock(stock)
+                        .SetUnitInorder(order).Build();
                     var checkEx = db.ProductStatus1s.Where(p => p.ProductId == productStatus.ProductId && p.LocationId == productStatus.LocationId && p.PackageId == productStatus.PackageId).Any();
                     if (checkEx) { return $"Product with the same prameters exist in storage '{location}'"; }
                     else

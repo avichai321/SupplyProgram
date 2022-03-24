@@ -10,8 +10,8 @@ namespace SupplyProgramUi.AdminUserControls
     public partial class AddPackageUserControl1 : UserControl
     {
         Adminuser adminuser = new Adminuser();
-        public event Action<string> packageChanged;
-        private Action<ComboBox,ComboBox, DataGridView> fillcombobox = (fillbox,scalebox, data) =>
+        public event Action<string> PackageChanged;
+        private Action<ComboBox,ComboBox, DataGridView> Fillcombobox = (fillbox,scalebox, data) =>
         {
             using (var db = new SuplyProgramContext())
             {
@@ -33,23 +33,23 @@ namespace SupplyProgramUi.AdminUserControls
         public AddPackageUserControl1()
         {
             InitializeComponent();
-            fillcombobox(removePackagecomboBox1, scalecomboBox2, PackagesdataGridView1);
+            Fillcombobox(removePackagecomboBox1, scalecomboBox2, PackagesdataGridView1);
   
         }
 
-        private void addPackagetodatabasebutton1_Click(object sender, EventArgs e)
+        private void AddPackagetodatabasebutton_Click(object sender, EventArgs e)
         {
             var message = adminuser.AddPackageToDatabase(addPackagetextBox1.Text,scalecomboBox2.Text);
-            packageChanged(message);
-            fillcombobox(removePackagecomboBox1, scalecomboBox2, PackagesdataGridView1);
+            PackageChanged(message);
+            Fillcombobox(removePackagecomboBox1, scalecomboBox2, PackagesdataGridView1);
 
         }
 
-        private void removePackagebutton1_Click(object sender, EventArgs e)
+        private void RemovePackagebutton_Click(object sender, EventArgs e)
         {
             var message = adminuser.RemovePackageFromDatabase(removePackagebutton1.Text);
-            packageChanged(message);
-            fillcombobox(removePackagecomboBox1, scalecomboBox2, PackagesdataGridView1);
+            PackageChanged(message);
+            Fillcombobox(removePackagecomboBox1, scalecomboBox2, PackagesdataGridView1);
         }
     }
 }

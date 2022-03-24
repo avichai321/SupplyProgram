@@ -10,8 +10,8 @@ namespace SupplyProgramUi.AdminUserControls
     public partial class AddLocationToDataBaseUserControl1 : UserControl
     {
         Adminuser adminuser = new Adminuser();
-        public event Action<string> locationChanged;
-        private Action<ComboBox, DataGridView> fillcombobox = (fillbox, data) =>
+        public event Action<string> LocationChanged;
+        private Action<ComboBox, DataGridView> Fillcombobox = (fillbox, data) =>
         {
             using (var db = new SuplyProgramContext())
             {
@@ -27,21 +27,21 @@ namespace SupplyProgramUi.AdminUserControls
         public AddLocationToDataBaseUserControl1()
         {
             InitializeComponent();
-            fillcombobox(removelocationcomboBox1, dataGridView1);
+            Fillcombobox(removelocationcomboBox1, dataGridView1);
         }
 
-        private void addlocationtodatabasebutton1_Click(object sender, EventArgs e)
+        private void Addlocationtodatabasebutton_Click(object sender, EventArgs e)
         {
             var message = adminuser.AddLocationToDatabase(addLocationtextBox1.Text);
-            locationChanged(message);
-            fillcombobox(removelocationcomboBox1, dataGridView1);
+            LocationChanged(message);
+            Fillcombobox(removelocationcomboBox1, dataGridView1);
         }
 
-        private void removelocationfromdatabasebutton1_Click(object sender, EventArgs e)
+        private void Removelocationfromdatabasebutton_Click(object sender, EventArgs e)
         {
             var message = adminuser.RemoveLocationFromDatabase(removelocationcomboBox1.Text);
-            locationChanged(message);
-            fillcombobox(removelocationcomboBox1, dataGridView1);
+            LocationChanged(message);
+            Fillcombobox(removelocationcomboBox1, dataGridView1);
         }
     }
 }

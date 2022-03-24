@@ -56,7 +56,7 @@
             this.removePackagebutton1.TabIndex = 13;
             this.removePackagebutton1.Text = "Remove From DataBase";
             this.removePackagebutton1.UseVisualStyleBackColor = true;
-            this.removePackagebutton1.Click += new System.EventHandler(this.removePackagebutton1_Click);
+            this.removePackagebutton1.Click += new System.EventHandler(this.RemovePackagebutton_Click);
             // 
             // removePackagelabel2
             // 
@@ -75,7 +75,7 @@
             this.addPackagetodatabasebutton1.TabIndex = 11;
             this.addPackagetodatabasebutton1.Text = "Add To DataBase";
             this.addPackagetodatabasebutton1.UseVisualStyleBackColor = true;
-            this.addPackagetodatabasebutton1.Click += new System.EventHandler(this.addPackagetodatabasebutton1_Click);
+            this.addPackagetodatabasebutton1.Click += new System.EventHandler(this.AddPackagetodatabasebutton_Click);
             // 
             // PackageNamelabel1
             // 

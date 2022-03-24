@@ -12,7 +12,7 @@ namespace SupplyProgramUi.UserUserControls
         Adminuser adminuser = new Adminuser();
         public event Action<string> ProductChanged;
         public event Action SaveAndExit;
-        private Action<ComboBox, ComboBox, ComboBox> fillcomboboxes = (locationbox, productbox, packagebox) =>
+        private Action<ComboBox, ComboBox, ComboBox> Fillcomboboxes = (locationbox, productbox, packagebox) =>
         {
             using (var db = new SuplyProgramContext())
             {
@@ -35,7 +35,7 @@ namespace SupplyProgramUi.UserUserControls
 
             }
         };
-        private Action<ComboBox, TextBox> updatescalebox = (packagebox, scaletext) =>
+        private Action<ComboBox, TextBox> Updatescalebox = (packagebox, scaletext) =>
          {
              using (var db = new SuplyProgramContext())
              {
@@ -55,7 +55,7 @@ namespace SupplyProgramUi.UserUserControls
         public addFullProductToStorageUserControl1()
         {
             InitializeComponent();
-            fillcomboboxes(LocationcomboBox1,ProductcomboBox2,PackagecomboBox3);
+            Fillcomboboxes(LocationcomboBox1,ProductcomboBox2,PackagecomboBox3);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -66,7 +66,7 @@ namespace SupplyProgramUi.UserUserControls
 
         private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
         {
-            updatescalebox(PackagecomboBox3, scaletextBox1);
+            Updatescalebox(PackagecomboBox3, scaletextBox1);
         }
 
         private void button2_Click(object sender, EventArgs e)
