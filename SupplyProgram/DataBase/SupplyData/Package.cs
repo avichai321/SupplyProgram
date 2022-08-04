@@ -9,7 +9,7 @@ namespace DataBase.SupplyData
     {
         public Package()
         {
-            ProductStatus1s = new HashSet<ProductStatus1>();
+            ProductStatus1s = new HashSet<ProductStatus>();
         }
 
         public int PackageId { get; set; }
@@ -17,6 +17,6 @@ namespace DataBase.SupplyData
         public int ScaleId { get; set; }
 
         public virtual ScaleValue Scale { get; set; }
-        public virtual ICollection<ProductStatus1> ProductStatus1s { get; set; }
+        public virtual ICollection<ProductStatus> ProductStatus1s { get; set; }
     }
 }

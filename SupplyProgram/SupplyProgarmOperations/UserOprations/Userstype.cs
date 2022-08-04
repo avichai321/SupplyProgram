@@ -96,7 +96,7 @@ namespace SupplyProgarmOperations
                 try
                 {
                     ProductFluentBuilder productFluentBuilder = new ProductFluentBuilder();
-                    ProductStatus1 productStatus = productFluentBuilder
+                    ProductStatus productStatus = productFluentBuilder
                         .SetProductname(product)
                         .SetLocationname(location)
                         .Setpackagename(package)
@@ -278,7 +278,7 @@ namespace SupplyProgarmOperations
                     var exlocation = db.Locations.Where(l => l.Location1 == location).Select(l => l.LocationId).First();
                     var expackage = db.Packages.Where(pa => pa.PackageType == package).Select(pa => pa.PackageId).First();
 
-                    ProductStatus1 Temppro = db.ProductStatus1s.Where(p => p.ProductId == exproduct && p.LocationId == exlocation && p.PackageId == expackage).First();
+                    ProductStatus Temppro = db.ProductStatus1s.Where(p => p.ProductId == exproduct && p.LocationId == exlocation && p.PackageId == expackage).First();
                     Temppro.UnitInstock = stock;
                     Temppro.UnitinOrder = order;
                     db.SaveChanges();

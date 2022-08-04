@@ -6,8 +6,8 @@ namespace SupplyProgarmOperations
 {
     public class ProductFluentBuilder
     {
-        private ProductStatus1 productStatus = new ProductStatus1();
-        public ProductStatus1 Build() => productStatus;
+        private ProductStatus productStatus = new ProductStatus();
+        public ProductStatus Build() => productStatus;
 
         public ProductFluentBuilder SetProductname(string productName)
         {

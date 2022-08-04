@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace DataBase.SupplyData
 {
-    public partial class ProductStatus1
+    public partial class ProductStatus
     {
         public int StatusId { get; set; }
         public int? LocationId { get; set; }

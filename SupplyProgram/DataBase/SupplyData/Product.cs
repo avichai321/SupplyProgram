@@ -9,12 +9,12 @@ namespace DataBase.SupplyData
     {
         public Product()
         {
-            ProductStatus1s = new HashSet<ProductStatus1>();
+            ProductStatus1s = new HashSet<ProductStatus>();
         }
 
         public int ProductId { get; set; }
         public string ProductName { get; set; }
 
-        public virtual ICollection<ProductStatus1> ProductStatus1s { get; set; }
+        public virtual ICollection<ProductStatus> ProductStatus1s { get; set; }
     }
 }

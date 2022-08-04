@@ -20,7 +20,7 @@ namespace DataBase.SupplyData
         public virtual DbSet<Location> Locations { get; set; }
         public virtual DbSet<Package> Packages { get; set; }
         public virtual DbSet<Product> Products { get; set; }
-        public virtual DbSet<ProductStatus1> ProductStatus1s { get; set; }
+        public virtual DbSet<ProductStatus> ProductStatus1s { get; set; }
         public virtual DbSet<ScaleValue> ScaleValues { get; set; }
         public virtual DbSet<User> Users { get; set; }
 
@@ -67,7 +67,7 @@ namespace DataBase.SupplyData
                 entity.Property(e => e.ProductName).HasMaxLength(50);
             });
 
-            modelBuilder.Entity<ProductStatus1>(entity =>
+            modelBuilder.Entity<ProductStatus>(entity =>
             {
                 entity.HasKey(e => e.StatusId);
 
@@ -82,7 +82,7 @@ namespace DataBase.SupplyData
                 entity.Property(e => e.ProductId).HasColumnName("ProductID");
 
                 entity.HasOne(d => d.Location)
-                    .WithMany(p => p.ProductStatus1s)
+                    .WithMany(p => p.ProductStatuss)
                     .HasForeignKey(d => d.LocationId)
                     .HasConstraintName("FK_ProductStatus1_Locations");
 
@@ -167,13 +167,13 @@ namespace DataBase.SupplyData
             #endregion
 
             #region ProductStatusBasic
-            modelBuilder.Entity<ProductStatus1>().HasData(
-                new ProductStatus1 { StatusId = 1, LocationId = 1, ProductId = 2, PackageId = 3, UnitInstock = 10, UnitinOrder = 30 },
-                new ProductStatus1 { StatusId = 2, LocationId = 1, ProductId = 5, PackageId = 1, UnitInstock = 15, UnitinOrder = 30 },
-                new ProductStatus1 { StatusId = 3, LocationId = 2, ProductId = 3, PackageId = 3, UnitInstock = 20, UnitinOrder = 25 },
-                new ProductStatus1 { StatusId = 4, LocationId = 3, ProductId = 6, PackageId = 4, UnitInstock = 15, UnitinOrder = 16 },
-                new ProductStatus1 { StatusId = 5, LocationId = 2, ProductId = 3, PackageId = 1, UnitInstock = 15, UnitinOrder = 30 },
-                new ProductStatus1 { StatusId = 6, LocationId = 1, ProductId = 1, PackageId = 1, UnitInstock = 10, UnitinOrder = 15 }
+            modelBuilder.Entity<ProductStatus>().HasData(
+                new ProductStatus { StatusId = 1, LocationId = 1, ProductId = 2, PackageId = 3, UnitInstock = 10, UnitinOrder = 30 },
+                new ProductStatus { StatusId = 2, LocationId = 1, ProductId = 5, PackageId = 1, UnitInstock = 15, UnitinOrder = 30 },
+                new ProductStatus { StatusId = 3, LocationId = 2, ProductId = 3, PackageId = 3, UnitInstock = 20, UnitinOrder = 25 },
+                new ProductStatus { StatusId = 4, LocationId = 3, ProductId = 6, PackageId = 4, UnitInstock = 15, UnitinOrder = 16 },
+                new ProductStatus { StatusId = 5, LocationId = 2, ProductId = 3, PackageId = 1, UnitInstock = 15, UnitinOrder = 30 },
+                new ProductStatus { StatusId = 6, LocationId = 1, ProductId = 1, PackageId = 1, UnitInstock = 10, UnitinOrder = 15 }
                 );
             #endregion
 

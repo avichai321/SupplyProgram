@@ -353,7 +353,7 @@ namespace DataBase.Migrations
                         new
                         {
                             UsersId = 2,
-                            Admin = true,
+                            Admin = false,
                             Email = "User2@gmail.com",
                             Password = "Aa123456",
                             Username = "User1"
